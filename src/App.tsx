@@ -5,6 +5,10 @@ import SideNav from './components/SideNav';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Events from './pages/Events';
+import Bonus from './pages/Bonus';
+import Withdrawal from './pages/Withdrawal';
+import Stake from './pages/Stake';
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/bonus" element={<Bonus />} />
+              <Route path="/withdrawal" element={<Withdrawal />} />
+              <Route path="/stake" element={<Stake />} />
             </Routes>
           </div>
         </main>

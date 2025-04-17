@@ -3,18 +3,16 @@ import HeroBanner from '../components/HeroBanner';
 import EventsCarousel from '../components/EventsCarousel';
 import StakingOptions from '../components/StakingOptions';
 import EarningsEstimator from '../components/EarningsEstimator';
-import Features from '../components/Features';
 import HowItWorks from '../components/HowItWorks';
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#13141A]">
+    <div className="space-y-16">
       <HeroBanner />
-      <HowItWorks />
       <EventsCarousel />
       <StakingOptions />
       <EarningsEstimator />
-      <Features />
+      <HowItWorks />
     </div>
   );
 };
