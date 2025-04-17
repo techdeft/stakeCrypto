@@ -10,11 +10,11 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-[#13141A]">
       <HeroBanner />
+      <HowItWorks />
       <EventsCarousel />
       <StakingOptions />
       <EarningsEstimator />
-      <HowItWorks />
-      {/* <Features /> */}
+      <Features />
     </div>
   );
 };

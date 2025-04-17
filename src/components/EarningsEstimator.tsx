@@ -20,6 +20,16 @@ const EarningsEstimator = () => {
     };
   };
 
+  const handleAmountChange = (increment: boolean) => {
+    const currentAmount = parseFloat(amount);
+    if (isNaN(currentAmount)) return;
+    
+    const newAmount = increment ? currentAmount + 10 : currentAmount - 10;
+    if (newAmount >= 0) {
+      setAmount(newAmount.toString());
+    }
+  };
+
   const earnings = calculateEarnings(amount);
 
   return (
@@ -52,8 +62,18 @@ const EarningsEstimator = () => {
           <div className="flex items-center justify-between h-[46px] px-4 bg-[#13141A] rounded-2xl border border-gray-800">
             <span className="text-xl text-purple-500">{amount}</span>
             <div className="flex flex-col gap-1">
-              <button className="text-gray-400 hover:text-white">▲</button>
-              <button className="text-gray-400 hover:text-white">▼</button>
+              <button 
+                className="text-gray-400 hover:text-white"
+                onClick={() => handleAmountChange(true)}
+              >
+                ▲
+              </button>
+              <button 
+                className="text-gray-400 hover:text-white"
+                onClick={() => handleAmountChange(false)}
+              >
+                ▼
+              </button>
             </div>
           </div>
         </div>
